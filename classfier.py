@@ -25,10 +25,9 @@ image_size = 64
 workers = 0
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-# img_path = '/dataset/img_align_celeba'
-# attr_path = './list_attr_celeba.txt'
-img_path = '/content/celeba/img_align_celeba/img_align_celeba'
-attr_path = '/acgan/list_attr_celeba.txt'
+# img_path = '/content/celeba/img_align_celeba/img_align_celeba'
+img_path = '/content/celeba10k/img_align_celeba/img_align_celeba'
+attr_path = '/acgan/list_attr_celeba_10000.txt'
 
 transform = transforms.Compose([
     transforms.Resize(image_size),

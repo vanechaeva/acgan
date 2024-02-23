@@ -7,10 +7,11 @@ import matplotlib.pyplot as plt
 import data_loader
 
 if __name__ == '__main__':
-    # data_path = '/dataset/img_align_celeba'
-    # attr_path = './list_attr_celeba.txt'
-    data_path = '/content/celeba/img_align_celeba/img_align_celeba'
-    attr_path = '/acgan/list_attr_celeba.txt'
+
+    # data_path = '/content/celeba/img_align_celeba/img_align_celeba'
+    # attr_path = '/acgan/list_attr_celeba.txt'
+    data_path = '/content/celeba10k/img_align_celeba/img_align_celeba'
+    attr_path = '/acgan/list_attr_celeba_10000.txt'
     image_size = 128
     batch_size = 64
     workers = 0
@@ -22,11 +23,9 @@ if __name__ == '__main__':
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
     ])
 
-    # img_path = '/dataset/img_align_celeba'
-    # attr_path = './list_attr_celeba.txt'
-
-    img_path = '/content/celeba/img_align_celeba/img_align_celeba'
-    attr_path = '/acgan/list_attr_celeba.txt'
+    # img_path = '/content/celeba/img_align_celeba/img_align_celeba'
+    img_path = '/content/celeba10k/img_align_celeba/img_align_celeba'
+    attr_path = '/acgan/list_attr_celeba_10000.txt'
 
     dataset = data_loader.CelebA_Slim(img_path=img_path,
                                       attr_path=attr_path,
